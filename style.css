@@ -109,17 +109,48 @@ body {
     margin-left: -1.5px;
 }
 
-#currentTime{
+#currentTime {
     width: 50%;
     height: 100%;
     margin-left: 35px;
     margin-top: -25px;
 }
 
-.mute{
+.mute {
     height: 40%;
     width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+.muteButtons {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+#decrease {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin: 5px
+}
+
+
+#mute {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    margin: 5px
+}
+
+#increase {
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    margin: 5px
 }
