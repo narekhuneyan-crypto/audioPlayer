@@ -41,10 +41,10 @@ function playSong() {
     songTitle.textContent = data.title[currentSong]
 
     let img = document.getElementById("row1")
-    img.style.backgroundImage = "url (" + data.poster[currentSong] + ")"
+    img.style.backgroundImage = "url(" + data.poster[currentSong] + ")"
 
     let main = document.getElementById("main")
-    main.style.backgroundImage = "url (" + data.poster[currentSong] + ")"
+    main.style.backgroundImage = "url(" + data.poster[currentSong] + ")"
     song.play()
 
 }
@@ -120,4 +120,38 @@ function muted(){
         song.muted = true
         mute.src = "images/volume-mute.png"
     }
+}
+
+
+function decrease(){
+    let mute = document.getElementById("mute")
+    song.volume -= 0.2
+      if (song.volume <= 0.1){
+        mute.src  = "images/volume-mute.png"
+      }
+}
+
+
+function increase(){
+    let mute = document.getElementById("mute")
+    song.volume += 0.2
+
+    if (song.volume >= 0.2){
+        mute.src  = "images/volume.png"
+    }
+
+}
+
+
+function back10() {
+    song.currentTime = Math.max(0, song.currentTime - 10);
+}
+
+function forward10() {
+    song.currentTime = Math.min(song.duration, song.currentTime + 10);
+}
+
+function randomSong() {
+    currentSong = Math.floor(Math.random() * data.song.length);
+    playSong();
 }

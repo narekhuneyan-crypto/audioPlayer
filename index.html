@@ -8,17 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-
 <body>
     <div class="main" id="main"> </div>
     <div class="player">
         <div class="row1" id="row1"> </div>
-        <div class="songTitle" id ="songTitle"><Title></Title></div>
+        <div class="songInfo">
+            <div class="songTitle" id ="songTitle"><Title></Title></div>
         <div class="row2">
             <div class="play">
                 <img src="images/previous.png" id="pre" alt=""onclick="pre()">
                 <img src="images/play-button-arrowhead.png" id="play" alt="" onclick="playOrPauseSong()">
                 <img src="images/next.png" id="next" alt=""onclick="next()">
+
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/back-10-seconds-icon-svg-download-png-2252286.png"id="back10" alt="Back 10s" onclick="back10()">
+<img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/forward-10-second-icon-svg-download-png-2252285.png" id="forward10" alt="Forward 10s" onclick="forward10()">
+
+<img src="https://png.pngtree.com/element_our/png_detail/20180930/music-player-media-icon-png_115310.jpg" id="randomSong"onclick="randomSong()">
             </div>
             <div class="seek-bar">
                 <div class="handle">
@@ -28,9 +33,9 @@
             <div class="mute">
                 <div id="currentTime">00:00 / 00:00</div> 
                 <div class="muteButtons">
-                    <img src="images/volume-down.png" id="decrease" alt="">
+                    <img src="images/volume-down.png" id="decrease" alt=""onclick = "decrease()">
                     <img src="images/volume.png" id="mute" alt=""onclick ="muted()">
-                    <img src="images/increase-volume.png" id="increase" alt="">
+                    <img src="images/increase-volume.png" id="increase" alt=""onclick = "increase()">
                 </div>
             </div>
         </div>
